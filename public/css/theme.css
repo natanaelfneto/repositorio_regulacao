@@ -1,0 +1,40 @@
+/*
+
+*/
+
+.landing-page .landing-page-nav .navbar-logo {
+    position: relative;
+    top: -35px;
+}
+
+.landing-page .landing-page-nav .navbar-logo .white {
+    display: inline-block;
+    height: 115px;
+    background: url(../img/logo-xs-white.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.landing-page .landing-page-nav .navbar-logo .dark {
+    display: none;
+    height: 115px;
+    background: url(../img/logo-xs.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.help-inline strong {
+    color: var(--danger);
+}
+
+@media (min-width: 768px) {
+    .mt-neg-10 {
+        margin-top: -10rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .mb-neg-20 {
+        margin-bottom: -20rem;
+    }
+}
