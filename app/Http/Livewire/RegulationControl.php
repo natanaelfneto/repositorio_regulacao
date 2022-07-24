@@ -43,7 +43,7 @@ class RegulationControl extends Component
 
 	public function regulations_search($request, $pagination)
 	{
-		Log::info('NOVA PESQUISA >> '. PHP_EOL . PHP_EOL . PHP_EOL);
+		Log::info(PHP_EOL . PHP_EOL . PHP_EOL . 'NOVA PESQUISA >> ');
 
 		# third step is check is one of the fields has genenic value
 		if ($request->filter_keyword == '')
@@ -70,13 +70,37 @@ class RegulationControl extends Component
 		$regulation_interval = $request->regulation_interval;
 		if (strpos($regulation_interval, ' até ') == false)
 		{
-			$regulation_interval_from = $regulation_interval;
-			$regulation_interval_to = $regulation_interval;
+			if (strpos($regulation_interval, '-') == false)
+			{
+				$regulation_interval_from = need_regulations::
+					orderBy('regulation_timestamp','ASC')->
+					whereNotNull('regulation_timestamp')->
+					first()['regulation_timestamp'];
+				$regulation_interval_to = need_regulations::
+					orderBy('regulation_timestamp','DESC')->
+					whereNotNull('regulation_timestamp')->
+					first()['regulation_timestamp'];
+			}
+			else {
+				$regulation_interval_from = $regulation_interval;
+				$regulation_interval_to = $regulation_interval;	
+			}
 		}
+		
 		else {
 			$regulation_interval_from = trim(explode(' até ', $regulation_interval)[0]);
 			$regulation_interval_to = trim(explode(' até ', $regulation_interval)[1]);
 		}
+
+
+		Log::info(
+			'PAGINACAO >> '. $pagination . PHP_EOL .
+			'PALAVRA >> '. $filter_keyword . PHP_EOL .
+			'ISSUER >> '. $regulation_issuer . PHP_EOL .
+			'TYPE >> '. $regulation_type . PHP_EOL .
+			'FROM >> '. $regulation_interval_from . PHP_EOL .
+			'TO >> '. $regulation_interval_to . PHP_EOL
+		);
 
 		# combined results for fields in sql eloquent paginated by 25;
 		if ($pagination)
