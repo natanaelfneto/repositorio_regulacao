@@ -64,60 +64,8 @@
 <body id="html_body">
 	<div id="page-container"
 		class="sidebar-mini enable-page-overlay side-scroll page-header-fixed">
-		@include('sidebar')
-		<header id="page-header" style="min-height: 4rem;">
-			<div class="content-header">
-				<div class="d-flex align-items-center">
-					<button type="button" class="btn btn-sm btn-dual mr-2 d-lg-none" data-toggle="layout"
-						data-action="side_overlay_toggle">
-						<i class="fa fa-fw fa-list-ul fa-flip-horizontal"></i>
-					</button>
-						<div data-toggle="tooltip" data-placement="bottom" title="menu lateral">
-							<button type="button" class="btn btn-sm btn-dual mr-2 d-none d-lg-inline-block"
-								data-toggle="layout" data-action="side_overlay_toggle">
-								<i class="fa fa-fw fa-list-ul fa-flip-horizontal"></i>
-							</button>
-						</div>
-						<div class="mx-2">Biblioteca de Regulação do Trabalho em Saúde - BRTS</div>
-				</div>
-				<div class="d-flex align-items-center">
-					@guest
-					<div class="mx-2 small mr-4">Usuário Anônimo</div>
-					<div data-toggle="tooltip" data-placement="bottom" title="menu lateral">
-						<a 
-							href="{{ route('login') }}"
-							class="btn btn-sm btn-info mr-2 d-none d-lg-inline-block">
-							Entrar <i class="icon icon-login"></i>
-						</a>
-					</div>
-					@endguest
-					@auth
-					<div class="mx-2">{{ auth()->user()->name }}</div>
-					<form method="POST" action="{{ route('logout') }}">
-						@csrf
-						<div data-toggle="tooltip" data-placement="bottom" title="menu lateral">
-							<a 
-								href="{{ route('logout') }}"
-								onclick="event.preventDefault();this.closest('form').submit();"
-								role="button"
-								class="btn btn-sm btn-alt-danger mr-2 d-none d-lg-inline-block">
-								Sair <i class="icon icon-logout"></i>
-							</a>
-						</div>
-					</form>
-					@endauth
-				</div>
-			</div>
-			<div id="page-header-loader" class="overlay-header bg-white">
-				<div class="content-header">
-					<div class="w-100 text-center">
-						<i class="fa fa-fw fa-circle-notch fa-spin"></i>
-					</div>
-				</div>
-			</div>
-		</header>
 		@yield ('content')
-		<footer id="page-footer" class="text-white d-flex" style="min-height: 15rem; background-color: #0D5987;">
+		<footer id="page-footer" class="text-white d-flex fixed-bottom" style="min-height: 15rem; background-color: #0D5987;">
 			<div class="content py-3 my-auto">
 				<div class="d-none row font-size-sm">
 					<div class="col-sm-6 order-sm-2 py-1 text-center text-sm-right">

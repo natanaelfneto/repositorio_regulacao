@@ -19,3 +19,6 @@ Route::get('/', [Controller::class, 'index'])->name('index');
 Route::get('/search', function () {
 	return view('search');
 })->name('search');
+
+Auth::routes();
+Route::get('/home', function() { return redirect('/'); });
