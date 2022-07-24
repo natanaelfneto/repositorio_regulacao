@@ -33,12 +33,12 @@
 								<span class="nav-main-link-name">Cadastrar Usuário</span>
 							</a>
 						</li>
-						{{-- <li class="nav-main-item">
+						<li class="nav-main-item">
 							<a class="nav-main-link" href="{{ route('users') }}">
 								<i class="nav-main-link-icon icon-list"></i>
 								<span class="nav-main-link-name">Listar Usuários</span>
 							</a>
-						</li> --}}
+						</li>
 					</ul>
 				</li>
 				<li class="d-none nav-main-item">
@@ -78,30 +78,30 @@
 						<span class="nav-main-link-name">Quantitativos</span>
 					</a>
 					<ul class="nav-main-submenu">
-						{{-- <li class="nav-main-item">
+						<li class="nav-main-item">
 							<a class="nav-main-link" href="{{ route('reports', ['graph' => 'professions']) }}">
 								<i class="nav-main-link-icon icon-bar-chart"></i>
 								<span class="nav-main-link-name">Quantidade por Profissão</span>
 							</a>
-						</li> --}}
-						{{-- <li class="nav-main-item">
+						</li>
+						<li class="nav-main-item">
 							<a class="nav-main-link" href="{{ route('reports', ['graph' => 'types']) }}">
 								<i class="nav-main-link-icon icon-bar-chart"></i>
 								<span class="nav-main-link-name">Quantidade por Tipo de Regulação</span>
 							</a>
-						</li> --}}
-						{{-- <li class="nav-main-item">
+						</li>
+						<li class="nav-main-item">
 							<a class="nav-main-link" href="{{ route('reports', ['graph' => 'issuers']) }}">
 								<i class="nav-main-link-icon icon-bar-chart"></i>
 								<span class="nav-main-link-name">Quantidade por Órgão Emissor</span>
 							</a>
-						</li> --}}
-						{{-- <li class="nav-main-item">
+						</li>
+						<li class="nav-main-item">
 							<a class="nav-main-link" href="{{ route('reports', ['graph' => 'timestamps']) }}">
 								<i class="nav-main-link-icon icon-bar-chart"></i>
 								<span class="nav-main-link-name">Quantidade por Tempo</span>
 							</a>
-						</li> --}}
+						</li>
 					</ul>
 				</li>
 			</li>
@@ -117,12 +117,12 @@
 						<span class="nav-main-link-name">Regulações</span>
 					</a>
 					<ul class="nav-main-submenu">
-						{{-- <li class="nav-main-item">
-							<a class="nav-main-link" href="{{ route('regulations_add') }}">
+						<li class="nav-main-item">
+							<a class="nav-main-link" href="{{ route('regulations') }}">
 								<i class="nav-main-link-icon icon-plus"></i>
 								<span class="nav-main-link-name">Cadastrar Regulação</span>
 							</a>
-						</li> --}}
+						</li>
 						<li class="nav-main-item">
 							<a class="nav-main-link" href="{{ route('search') }}">
 								<i class="nav-main-link-icon icon-magnifier"></i>
@@ -141,12 +141,12 @@
 						<span class="nav-main-link-name">Órgãos Emissores</span>
 					</a>
 					<ul class="nav-main-submenu">
-						{{-- <li class="nav-main-item">
-							<a class="nav-main-link" href="{{ route('issuers_add') }}">
+						<li class="nav-main-item">
+							<a class="nav-main-link" href="{{ route('issuers') }}">
 								<i class="nav-main-link-icon icon-plus"></i>
 								<span class="nav-main-link-name">Cadastrar Órgão Emissor</span>
 							</a>
-						</li> --}}
+						</li>
 					</ul>
 				</li>
 				<li class="nav-main-item">
@@ -159,12 +159,12 @@
 						<span class="nav-main-link-name">Tipos de Normativas</span>
 					</a>
 					<ul class="nav-main-submenu">
-						{{-- <li class="nav-main-item">
-							<a class="nav-main-link" href="{{ route('regulation_types_add') }}">
+						<li class="nav-main-item">
+							<a class="nav-main-link" href="{{ route('types') }}">
 								<i class="nav-main-link-icon icon-plus"></i>
 								<span class="nav-main-link-name">Cadastrar Tipo de Norma</span>
 							</a>
-						</li> --}}
+						</li>
 					</ul>
 				</li>
 				<li class="nav-main-item">
@@ -177,12 +177,12 @@
 						<span class="nav-main-link-name">Profissões</span>
 					</a>
 					<ul class="nav-main-submenu">
-						{{-- <li class="nav-main-item">
-							<a class="nav-main-link" href="{{ route('professions_add') }}">
+						<li class="nav-main-item">
+							<a class="nav-main-link" href="{{ route('professions') }}">
 								<i class="nav-main-link-icon icon-plus"></i>
 								<span class="nav-main-link-name">Cadastrar Profissão</span>
 							</a>
-						</li> --}}
+						</li>
 					</ul>
 				</li>
 			</li>
